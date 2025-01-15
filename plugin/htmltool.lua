@@ -22,3 +22,16 @@ vim.api.nvim_create_user_command('HtmlAssets', function ()
         '/*l ink css to html with <link> tag */'
     }, 'assets/main.css')
 end, {})
+
+vim.api.nvim_create_user_command('HtmlPro', function (opts)
+    local name = tostring(opts.args)
+    vim.fn.mkdir(name, '-p')
+    vim.cmd('cd '..name)
+    vim.cmd("HtmlAssets")
+
+    local buf = vim.api.nvim_create_buf(true, false)
+    vim.api.nvim_buf_set_name(buf, "index.html")
+    vim.api.nvim_set_current_buf(buf)
+    vim.cmd("HtmlSetup")
+
+end, { nargs = 1})
