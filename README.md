@@ -3,11 +3,11 @@ Small tool for html in neovim
 
 ## commands
 
-###HtmlSetup
+### HtmlSetup
 Makes a basic html, head and body setup
 
-###HtmlAssets
+### HtmlAssets
 Creates an assets folder with a css file and scripts folder
 
-###HtmlPro
+### HtmlPro
 Creates an entire project folder combining to above commands
