@@ -10,7 +10,6 @@ local htmlsetup = {
     '',
     '</body>',
     '</html>'
-
 }
 
 vim.api.nvim_create_user_command('HtmlSetup', function ()
