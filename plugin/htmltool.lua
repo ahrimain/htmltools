@@ -17,8 +17,8 @@ vim.api.nvim_create_user_command('HtmlSetup', function ()
 end, {})
 
 vim.api.nvim_create_user_command('HtmlAssets', function ()
-    vim.fm.mkdir('assets', '-p')
-    vim.fm.writefile({
+    vim.fn.mkdir('assets', '-p')
+    vim.fn.writefile({
         '/*l ink css to html with <link> tag */'
     }, 'assets/main.css')
 end, {})
